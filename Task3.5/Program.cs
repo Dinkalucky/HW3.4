@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Task3._5
 {
-    public class Book
+    internal class Program
     {
-        public void Show()
+        static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8;
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Назва книги:");
             new Title().Show();
@@ -19,48 +20,6 @@ namespace Task3._5
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Зміст:");
             new Content().Show();
-        }
-    }
-
-    public class Title
-    {
-        private string title = "CLR VIA C#";
-
-        public void Show()
-        {
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine(title);
-        }
-    }
-
-    public class Author
-    {
-        private string author = "CLR VIA C#";
-
-        public void Show()
-        {
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine(author);
-        }
-    }
-
-    public class Content
-    {
-        private string content = "Книга з програмування.";
-
-        public void Show()
-        {
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine(content);
-        }
-    }
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.OutputEncoding = Encoding.UTF8;
-            Book book = new Book();
-            book.Show();
 
             Console.Read();
         }
